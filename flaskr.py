@@ -1,5 +1,5 @@
 import sqlite3
-from flask import Flask, g
+from flask import Flask, g, render_template
 
 # Configurações
 
@@ -26,4 +26,4 @@ def after(exception):
 
 @app.route('/')
 def index():
-    return "<h1>Hello World</h1>"
+    return render_template('index.html')
